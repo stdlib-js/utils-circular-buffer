@@ -394,7 +394,7 @@ tape( 'if an environment supports `Symbol.iterator`, a circular buffer instance 
 	var i;
 
 	CircularBuffer = proxyquire( './../lib/main.js', {
-		'@stdlib/symbol/iterator': '__ITERATOR_SYMBOL__'
+		'@stdlib/symbol-iterator': '__ITERATOR_SYMBOL__'
 	});
 
 	buf = new CircularBuffer( 3 );
@@ -424,7 +424,7 @@ tape( 'if an environment does not support `Symbol.iterator`, a circular buffer i
 	var it;
 
 	CircularBuffer = proxyquire( './../lib/main.js', {
-		'@stdlib/symbol/iterator': false
+		'@stdlib/symbol-iterator': false
 	});
 
 	buf = new CircularBuffer( 3 );
