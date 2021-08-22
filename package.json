@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-circular-buffer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Circular buffer.",
   "license": "Apache-2.0",
   "author": {
