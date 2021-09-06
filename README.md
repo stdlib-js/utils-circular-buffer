@@ -346,6 +346,13 @@ for ( i = 0; i < 100; i++ ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/utils/fifo`][@stdlib/utils/fifo]: first-in-first-out (FIFO) queue.
+-   [`@stdlib/utils/stack`][@stdlib/utils/stack]: stack.
+
 </section>
 
 <!-- /.related -->
@@ -406,6 +413,14 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-circular-buffer/main/LICENSE
+
+<!-- <related-links> -->
+
+[@stdlib/utils/fifo]: https://github.com/stdlib-js/utils-fifo
+
+[@stdlib/utils/stack]: https://github.com/stdlib-js/utils-stack
+
+<!-- </related-links> -->
 
 </section>
 
