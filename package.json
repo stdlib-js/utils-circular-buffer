@@ -37,6 +37,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
+    "@stdlib/array-base-arraylike2object": "^0.0.x",
     "@stdlib/assert-is-collection": "^0.0.x",
     "@stdlib/assert-is-nonnegative-integer": "^0.0.x",
     "@stdlib/assert-is-positive-integer": "^0.0.x",
@@ -47,8 +48,12 @@
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.x"
   },
   "devDependencies": {
+    "@stdlib/array-complex128": "^0.0.x",
     "@stdlib/assert-instance-of": "^0.0.x",
     "@stdlib/bench": "^0.0.x",
+    "@stdlib/complex-float64": "^0.0.x",
+    "@stdlib/complex-imag": "^0.0.x",
+    "@stdlib/complex-real": "^0.0.x",
     "@stdlib/random-base-randu": "^0.0.x",
     "proxyquire": "^2.0.0",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",

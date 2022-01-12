@@ -71,7 +71,7 @@ var buf = circularBuffer( new Float64Array( 3 ) );
 // returns <CircularBuffer>
 ```
 
-##### buf.clear()
+##### circularBuffer.prototype.clear()
 
 Clears a buffer.
 
@@ -96,9 +96,9 @@ n = buf.count;
 // returns 0
 ```
 
-##### buf.count
+##### circularBuffer.prototype.count
 
-Returns the number of elements currently in the buffer.
+Read-only property which returns the number of elements currently in the buffer.
 
 ```javascript
 var buf = circularBuffer( 3 );
@@ -113,9 +113,9 @@ var n = buf.count;
 // returns 2
 ```
 
-##### buf.full
+##### circularBuffer.prototype.full
 
-Returns a `boolean` indicating if a buffer is full.
+Read-only property which returns a `boolean` indicating if a buffer is full.
 
 ```javascript
 var buf = circularBuffer( 3 );
@@ -137,7 +137,7 @@ bool = buf.full;
 // returns true
 ```
 
-##### buf.iterator( \[niters] )
+##### circularBuffer.prototype.iterator( \[niters] )
 
 Returns an iterator for iterating over a buffer. If an environment supports `Symbol.iterator`, the returned iterator is iterable.
 
@@ -218,19 +218,19 @@ bool = it.next().done;
 
 If iterating over a partially full circular buffer is necessary, use `buf.toArray()` and iterate over the returned array.
 
-##### buf.length
+##### circularBuffer.prototype.length
 
-Buffer length (capacity).
+Read-only property returning the buffer length (i.e., capacity).
 
 ```javascript
-var buf = circularBuffer( new Array( 3 ) );
+var buf = circularBuffer( [ 0, 0, 0 ] );
 
 // Get the buffer length:
 var len = buf.length;
 // returns 3
 ```
 
-##### buf.push( value )
+##### circularBuffer.prototype.push( value )
 
 Adds a value to the buffer.
 
@@ -254,7 +254,7 @@ v = buf.push( 'boop' );
 
 When a circular buffer is empty or partially full, this method returns `undefined`. Once a circular buffer is **full**, the method returns removed values.
 
-##### buf.toArray()
+##### circularBuffer.prototype.toArray()
 
 Returns an array of buffer values.
 
@@ -272,7 +272,7 @@ var vals = buf.toArray();
 // returns [ 'bar', 'beep', 'boop' ]
 ```
 
-##### buf.toJSON()
+##### circularBuffer.prototype.toJSON()
 
 Serializes a circular buffer as JSON.
 
@@ -300,6 +300,10 @@ var o = buf.toJSON();
 
 <section class="notes">
 
+## Notes
+
+-   The constructor supports array-like object `buffer` arguments which use getter and setter accessors for element access (e.g., [`Complex64Array`][@stdlib/array/complex64], [`Complex128Array`][@stdlib/array/complex128], etc).
+
 </section>
 
 <!-- /.notes -->
@@ -315,15 +319,13 @@ var o = buf.toJSON();
 ```javascript
 var circularBuffer = require( '@stdlib/utils-circular-buffer' );
 
-var buf;
-var v;
-var i;
-
 // Create a circular buffer capable of holding 5 elements:
-buf = circularBuffer( 5 );
+var buf = circularBuffer( 5 );
 console.log( 'Buffer length: %s', buf.length );
 
 // Continuously add values to the buffer...
+var v;
+var i;
 for ( i = 0; i < 100; i++ ) {
     v = buf.push( i );
     console.log( 'Count: %d. Added value: %s. Removed value: %s.', buf.count, i, ( v === void 0 ) ? '(none)' : v );
@@ -417,6 +419,10 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-circular-buffer/main/LICENSE
+
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
 <!-- <related-links> -->
 
