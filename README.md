@@ -34,38 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-circular-buffer
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-circularBuffer = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var circularBuffer = require( 'path/to/vendor/umd/utils-circular-buffer/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.circularBuffer;
-})();
-</script>
+var circularBuffer = require( '@stdlib/utils-circular-buffer' );
 ```
 
 #### circularBuffer( buffer )
@@ -332,13 +324,8 @@ var o = buf.toJSON();
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var circularBuffer = require( '@stdlib/utils-circular-buffer' );
 
 // Create a circular buffer capable of holding 5 elements:
 var buf = circularBuffer( 5 );
@@ -351,11 +338,6 @@ for ( i = 0; i < 100; i++ ) {
     v = buf.push( i );
     console.log( 'Count: %d. Added value: %s. Removed value: %s.', buf.count, i, ( v === void 0 ) ? '(none)' : v );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -454,15 +436,15 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/utils-circular-buffer/main/LICENSE
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/umd
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
 <!-- <related-links> -->
 
-[@stdlib/utils/fifo]: https://github.com/stdlib-js/utils-fifo/tree/umd
+[@stdlib/utils/fifo]: https://github.com/stdlib-js/utils-fifo
 
-[@stdlib/utils/stack]: https://github.com/stdlib-js/utils-stack/tree/umd
+[@stdlib/utils/stack]: https://github.com/stdlib-js/utils-stack
 
 <!-- </related-links> -->
 
