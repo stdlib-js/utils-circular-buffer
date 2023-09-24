@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import circularBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@deno/mod.js';
+import circularBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@v0.1.0-deno/mod.js';
 ```
 
 #### circularBuffer( buffer )
@@ -320,7 +320,7 @@ var o = buf.toJSON();
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import circularBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@deno/mod.js';
+import circularBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@v0.1.0-deno/mod.js';
 
 // Create a circular buffer capable of holding 5 elements:
 var buf = circularBuffer( 5 );
