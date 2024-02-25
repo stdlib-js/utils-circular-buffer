@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import circularBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@esm/index.mjs';
+import circularBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@v0.2.1-esm/index.mjs';
 ```
 
 #### circularBuffer( buffer )
@@ -325,7 +325,7 @@ var o = buf.toJSON();
 <body>
 <script type="module">
 
-import circularBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@esm/index.mjs';
+import circularBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-circular-buffer@v0.2.1-esm/index.mjs';
 
 // Create a circular buffer capable of holding 5 elements:
 var buf = circularBuffer( 5 );
